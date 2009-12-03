@@ -1,0 +1,45 @@
+#!/bin/bash
+
+run()
+{
+  echo $*
+  eval $*
+}
+
+CONF=~/conf
+
+ln -sf $CONF/vimrc .vimrc
+ln -sf $CONF/vim .vim
+
+for f in $CONF/bash/*; do
+  if [ `basename $f` != "CVS" ]; then
+    dest=.`basename $f`
+    run ln -sf $f $dest
+  fi
+done
+
+for f in $CONF/cvs/*; do
+  if [ `basename $f` != "CVS" ]; then
+    dest=.`basename $f`
+    run ln -sf $f $dest
+  fi
+done
+
+run ln -sf $CONF/Eterm .Eterm
+
+run ln -sf $CONF/ion .ion
+run ln -sf $CONF/ion2 .ion2
+
+run mkdir -p .ssh
+run ln -sf $CONF/ssh/config .ssh
+
+run ln -sf $CONF/Xdefaults .Xdefaults
+
+run ln -sf $CONF/screenrc .screenrc
+
+run ln -sf $CONF/rpmmacros .rpmmacros
+
+run ln -sf $CONF/irbrc .irbrc
+
+run ln -sf $CONF/colorgccrc .colorgccrc
+

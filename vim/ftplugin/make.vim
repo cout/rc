@@ -1,0 +1,2 @@
+set noet
+set noai

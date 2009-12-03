@@ -1,0 +1,207 @@
+! xterm*vt100.Translations: #override\n\
+! 	<KeyPress>Prior : scroll-back(1,page)\n\
+! 	<KeyPress>Next : scroll-forw(1,page)
+! nxterm*vt100.Translations: #override\n\
+! 	<KeyPress>Prior : scroll-back(1,page)\n\
+! 	<KeyPress>Next : scroll-forw(1,page)
+! XTerm*VT100.Translations:             #override \n\
+!               s<Btn4Down>: string("0x9b") string("[64~") \n\
+!               s<Btn5Down>: string("0x9b") string("[65~") \n\
+!               <Btn4Down>: string("0x9b") string("[62~") \n\
+!               <Btn5Down>: string("0x9b") string("[63~") \n\
+!               <Btn4Up>: \n\
+!               <Btn5Up>: 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! xterm (and friends)
+
+xterm*highlightSelection:  true
+xterm*utf8: true
+
+! Note that using * but no . here will mess up the Xaw3d scrollbar.
+! Note that using xterm.vt100.background will mess up the menus.
+xterm*.background: Black
+xterm*.foreground: Grey
+xterm.vt100.colorMode:  on
+xterm.vt100.dynamicColors:  on
+xterm.vt100.colorAttrMode: false
+xterm.vt100.underLine:  on
+xterm.vt100.boldColors: true
+xterm.vt100.boldMode: false
+xterm.vt100.colorBDMode: true
+xterm.vt100.colorBLMode: true
+xterm.vt100.colorRBMode: false
+xterm.vt100.colorULMode: false
+xterm.vt100.colorBD: white
+
+! xterm.vt100*color0: black
+! xterm.vt100*color1: red
+! xterm.vt100*color2: green
+! xterm.vt100*color3: yellow
+! xterm.vt100*color4: blue
+! xterm.vt100*color5: magenta
+! xterm.vt100*color6: cyan
+! xterm.vt100*color7: grey
+
+xterm.vt100.color0:                    black
+xterm.vt100.color1:                    #B00000
+!xterm.vt100.color1:                    #F00000
+xterm.vt100.color2:                    green4
+xterm.vt100.color3:                    yellow3
+xterm.vt100.color4:                    blue3
+xterm.vt100.color5:                    #A000A0
+xterm.vt100.color6:                    #009999
+!xterm.vt100.color7:                    #D0B099
+xterm.vt100.color7:                    #a8a8a8
+
+!xterm.vt100.color8:                    grey90
+xterm.vt100.color8:                    #444444
+xterm.vt100.color9:                    #FF3030
+xterm.vt100.color10:                   #70FF70
+xterm.vt100.color11:                   #F0F080
+xterm.vt100.color12:                   #B0B0FF
+xterm.vt100.color13:                   #EFA0BF
+xterm.vt100.color14:                   #A0FFFF
+xterm.vt100.color15:                   white
+
+! Number of lines of scrollback to save
+xterm*saveLines:    1500
+
+xterm*reverseWrap:  true
+
+*visualBell:        true
+*scrollTtyOutput:   False
+*scrollKey:     True
+Scrollbar.JumpCursor:   True
+
+xterm*Font: *vga*
+xterm*rightScrollBar: true
+xterm*scrollBar: true
+xterm*scrollbar.background: grey
+xterm*scrollbar.foreground: black
+
+! Good Xaw3d Defaults
+*Form.background:                       #c0c0c0
+*TransientShell*Dialog.background:      #c0c0c0
+*Command.background:            #c0c0c0
+*Menubutton.background:         #c0c0c0
+*ScrollbarBackground:           #c0c0c0
+*Scrollbar*background:          #c0c0c0
+*Scrollbar*width:               15
+*Scrollbar*height:              15
+*Scrollbar*shadowWidth:         2
+*Scrollbar*cursorName:          top_left_arrow
+*Scrollbar*pushThumb:           false
+*shapeStyle:                    Rectangle
+*beNiceToColormap:              false
+*shadowWidth:                   2
+*highlightThickness:            0
+*topShadowContrast:             20
+*bottomShadowContrast:          55
+
+
+! Hmm, this doesn't seem to do anything
+! rxvt*vt100.Translations:             #override \n\
+!   s<Btn4Down>: string("0x9b") string("[64~") \n\
+!   s<Btn5Down>: string("0x9b") string("[65~") \n\
+!   <Btn4Down>: string("0x9b") string("[62~") \n\
+!   <Btn5Down>: string("0x9b") string("[63~") \n\
+!   <Btn4Up>: \n\                                                        
+!  <Btn5Up>:                    
+
+*toolBar*destinations.isEnabled: false
+*toolBar*viewSecurity.isEnabled: false
+*myshopping.isEnabled: false
+
+! *drawingArea.translations:  #replace    \
+!   <Btn1Down>:          ArmLink()  \n\
+!   <Btn2Down>:          ArmLink()  \n\
+!   ~Shift<Btn1Up>:      ActivateLink()  \n\
+!   ~Shift<Btn2Up>:      ActivateLink(new-window) DisarmLink()    \n\
+!   Shift<Btn1Up>:       ActivateLink(save-only) DisarmLink()    \n\
+!   Shift<Btn2Up>:       ActivateLink(save-only) DisarmLink()    \n\
+!   <Btn1Motion>:        DisarmLinkIfMoved()  \n\
+!   <Btn2Motion>:        DisarmLinkIfMoved()  \n\
+!   <Btn3Motion>:        DisarmLinkIfMoved()  \n\
+!   <Motion>:            DescribeLink()  \n\
+!   <Btn3Down>:          xfeDoPopup()    \n\
+!   <Btn3Up>:            ActivatePopup() \n\
+!   Ctrl<Btn4Down>:      PageUp()\n\
+!   Ctrl<Btn5Down>:      PageDown()\n\
+!   Shift<Btn4Down>:     LineUp()\n\
+!   Shift<Btn5Down>:     LineDown()\n\
+!   None<Btn5Down>:      LineDown()LineDown()LineDown()LineDown()LineDown()LineDown()\n\
+!   None<Btn4Down>:      LineUp()LineUp()LineUp()LineUp()LineUp()LineUp()\n\ 
+!   Alt<Btn4Down>:       xfeDoCommand(forward)\n\
+!   Alt<Btn5Down>:       xfeDoCommand(back)\n
+!   
+! *globalNonTextTranslations: #override\n\
+!   Shift<Btn4Down>:    LineUp()\n\
+!   Shift<Btn5Down>:    LineDown()\n\
+!   None<Btn4Down>:     LineUp()LineUp()LineUp()LineUp()LineUp()LineUp()\n\ 
+!   None<Btn5Down>:     LineDown()LineDown()LineDown()LineDown()LineDown()LineDown()\n\ 
+!   Alt<Btn4Down>:      xfeDoCommand(forward)\n\
+!   Alt<Btn5Down>:      xfeDoCommand(back)\n
+
+! My rxvt options
+
+rxvt*font: vga16
+rxvt*boldFont: vga16
+rxvt*scrollBar_right: true
+rxvt*foreground: grey
+rxvt*background: black
+rxvt*saveLines: 1000
+rxvt*scrollTtyOutput: false
+rxvt*scrollKeypress: true
+
+#if 0
+rxvt*color0:    #000000
+rxvt*color1:    #a80000
+rxvt*color2:    #00a800
+rxvt*color3:    #a8a800
+rxvt*color4:    #0000a8
+rxvt*color5:    #a800a8
+rxvt*color6:    #00a8a8
+rxvt*color7:    #a8a8a8
+
+rxvt*color8:    #000054
+rxvt*color9:    #ff0054
+rxvt*color10:   #00ff54
+rxvt*color11:   #ffff54
+rxvt*color12:   #0000ff
+rxvt*color13:   #ff00ff
+rxvt*color14:   #00ffff
+rxvt*color15:   #ffffff
+#endif
+
+Rxvt*color0:                    black
+Rxvt*color1:                    #B00000
+!Rxvt*color1:                    #F00000
+Rxvt*color2:                    green4
+Rxvt*color3:                    yellow3
+Rxvt*color4:                    blue3
+Rxvt*color5:                    #A000A0
+Rxvt*color6:                    #009999
+!Rxvt*color7:                    #D0B099
+rxvt*color7:    #a8a8a8
+
+!Rxvt*color8:                    grey90
+Rxvt*color8:    #444444
+Rxvt*color9:                    #FF3030
+Rxvt*color10:                   #70FF70
+Rxvt*color11:                   #F0F080
+Rxvt*color12:                   #B0B0FF
+Rxvt*color13:                   #EFA0BF
+Rxvt*color14:                   #A0FFFF
+Rxvt*color15:                   white
+
+rxvt*cursorColor: grey
+
+Xft.antialias: 0
+!Xft.dpi:       96.000000
+!Xft.hinting:   1
+!Xft.hintstyle: hintmedium
+Xft.rgba:       none
+
+gnuplot*exportselection: off
+gnuplot*raise: off 

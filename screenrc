@@ -1,0 +1,6 @@
+escape ^_/
+bindkey "\001" stuff \001
+scrollback 1000
+defbce on
+term screen-bce
+
