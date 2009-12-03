@@ -54,8 +54,6 @@ if has("autocmd")
     filetype indent on
   endif
 
-  au BufRead * 
-
   " ChangeLog settings
   au FileType changelog set tw=66 noet preserveindent copyindent
 
@@ -209,7 +207,7 @@ let showmarks_enable=0
 
 let CVSCommandDiffOpt="u"
 
-set bg=dark
+set bg=light
 
 let perl_fold=1
 set foldlevel=2
