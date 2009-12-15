@@ -1,0 +1,8 @@
+cvs -q
+add -kk
+checkout -kk -P
+update -d -P -kk
+diff -u -kk
+rdiff -u -kk
+export -kk
+
