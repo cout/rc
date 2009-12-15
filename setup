@@ -6,17 +6,7 @@ run()
   eval $*
 }
 
-CONF=~/conf
-
-ln -sf $CONF/vimrc .vimrc
-ln -sf $CONF/vim .vim
-
-for f in $CONF/bash/*; do
-  if [ `basename $f` != "CVS" ]; then
-    dest=.`basename $f`
-    run ln -sf $f $dest
-  fi
-done
+CONF=~/git/rc
 
 for f in $CONF/cvs/*; do
   if [ `basename $f` != "CVS" ]; then
@@ -25,21 +15,13 @@ for f in $CONF/cvs/*; do
   fi
 done
 
-run ln -sf $CONF/Eterm .Eterm
+RC="Eterm ion ion2 config Xdeafults screenrc rpmmacros irbirc colorgccrc
+gitconfig vim vimrc cvsrc cvsignore"
 
-run ln -sf $CONF/ion .ion
-run ln -sf $CONF/ion2 .ion2
+for i in $RC; do
+  run ln -sf $CONF/$i .$i
+done
 
 run mkdir -p .ssh
 run ln -sf $CONF/ssh/config .ssh
-
-run ln -sf $CONF/Xdefaults .Xdefaults
-
-run ln -sf $CONF/screenrc .screenrc
-
-run ln -sf $CONF/rpmmacros .rpmmacros
-
-run ln -sf $CONF/irbrc .irbrc
-
-run ln -sf $CONF/colorgccrc .colorgccrc
 
