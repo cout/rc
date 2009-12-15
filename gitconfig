@@ -1,0 +1,12 @@
+[user]
+  name = Paul Brannan
+  email = curlypaul924@gmail.com
+
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+
+[core]
+  pager = less -n -r
+
