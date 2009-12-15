@@ -8,13 +8,6 @@ run()
 
 CONF=~/git/rc
 
-for f in $CONF/cvs/*; do
-  if [ `basename $f` != "CVS" ]; then
-    dest=.`basename $f`
-    run ln -sf $f $dest
-  fi
-done
-
 RC="Eterm ion ion2 config Xdeafults screenrc rpmmacros irbirc colorgccrc
 gitconfig vim vimrc cvsrc cvsignore"
 
