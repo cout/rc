@@ -8,7 +8,7 @@ run()
 
 CONF=~/git/rc
 
-RC="Eterm ion ion2 config Xdeafults screenrc rpmmacros irbirc colorgccrc
+RC="Eterm ion ion2 config Xdefaults screenrc rpmmacros irbrc colorgccrc
 gitconfig vim vimrc cvsrc cvsignore"
 
 for i in $RC; do
