@@ -15,6 +15,6 @@ for i in $RC; do
   run ln -sf $CONF/$i .$i
 done
 
-run mkdir -p .ssh
-run ln -sf $CONF/ssh/config .ssh
+# run mkdir -p .ssh
+# run ln -sf $CONF/ssh/config .ssh
 
