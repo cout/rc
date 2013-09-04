@@ -11,6 +11,8 @@ CONF=~/git/rc
 RC="Eterm ion ion2 config Xdefaults screenrc rpmmacros irbrc colorgccrc
 gitconfig vim vimrc cvsrc cvsignore"
 
+cd $HOME
+
 for i in $RC; do
   run ln -sf $CONF/$i .$i
 done
